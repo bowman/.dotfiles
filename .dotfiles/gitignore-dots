@@ -1,0 +1,9 @@
+# git ls-files --others --exclude-from=.git/info/exclude
+# used for a .dotfiles/repo.git/info/exclude
+
+# only look at paths in ~ starting with a dot
+/*
+!/.*
+*~
+*.old
+.DS_Store
