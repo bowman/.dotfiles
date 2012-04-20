@@ -1,0 +1,4 @@
+# source with:
+#  . .dotfiles/on
+export GIT_DIR=~/.dotfiles/repo.git
+export GIT_WORK_TREE=~

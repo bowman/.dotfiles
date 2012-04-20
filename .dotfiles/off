@@ -1,0 +1,4 @@
+# source with:
+#  . .dotfiles/off
+unset GIT_DIR
+unset GIT_WORK_TREE
