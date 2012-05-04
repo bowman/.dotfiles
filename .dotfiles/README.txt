@@ -2,16 +2,11 @@
 The idea to keep your .dotfiles in your $HOME where they belong,
 but making the check-out-ness of your $HOME something you toggle.
 
-mkdir ~/.dotfiles
-GIT_DIR=.dotfiles/repo.git GIT_WORK_TREE=~ git init
+Bootstrap a new machine:
 
-. .dotfiles/on
-. .dotfiles/off
-
-git config core.bare
-false
-git config core.worktree
-$HOME
+    source <( \
+     curl -q https://raw.github.com/bowman/.dotfiles/master/.dotfiles/setup.sh \
+    )
 
 vi .dotfiles/repo.git/info/exclude # usually not distributed
 vi ~/.gitignore # dangerous, others see it
@@ -22,3 +17,5 @@ ln -s $HOME/.dotfiles/gitignore-dots $HOME/.dotfiles/repo.git/info/exclude
 
 Check against /usr/share/git-core/templates/info/exclude ?
 
+Fancy Alternative:
+https://github.com/RichiH/vcsh
