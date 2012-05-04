@@ -1,0 +1,10 @@
+# source the usual file plus some per-USER ones
+# useful with --rcfile as it usually supressed some, eg.
+#   ssh -t  $* "bash --rcfile .bashrc.${USER}_all -i -";
+
+. /etc/bash.bashrc
+. .bashrc
+# custom for a given user (shared accounts)
+[ -e ".bashrc.${USER}" ] && . ".bashrc.${USER}"
+# tweaks for a given machine (not checked in)
+[ -e ".bashrc.${USER}_local" ] && . ".bashrc.${USER}_local"
