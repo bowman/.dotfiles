@@ -1,0 +1,44 @@
+# /usr/share/X11/locale/en_US.UTF-8/Compose
+include "%L"
+
+# personal shortcuts
+include .XCompose.local
+
+<Multi_key> <less> <minus> : "←" U2190
+<Multi_key> <bar> <asciicircum> : "↑" U2191
+<Multi_key> <minus> <greater> : "→" U2192
+<Multi_key> <bar> <v> : "↓" U2193
+
+<Multi_key> <colon> <parenright> : "☺" U263A
+<Multi_key> <colon> <parenleft> : "☹" U2639
+<Multi_key> <b> <colon> <parenright> : "☺" U263A
+<Multi_key> <b> <colon> <parenleft> : "☹" U2639
+<Multi_key> <o> <X> : "☠" U2620
+<Multi_key> <o> <Y> : "☢" U2622
+<Multi_key> <s> <n> <o> : "☃" U2603
+<Multi_key> <b> <u> <g> : "aébçc…d〝e〞f“g”h‘i’j•k½l–m—n o p q r s"
+<Multi_key> <-> <h> : "--help"
+
+# App::Uni
+# $ uni 'greek.*letter'
+# $ perl -C -le 'print chr($_) for 9750..9780' | column
+# ☖       ☚       ☞       ☢       ☦       ☪       ☮       ☲
+# ☗       ☛       ☟       ☣       ☧       ☫       ☯       ☳
+# ☘       ☜       ☠       ☤       ☨       ☬       ☰       ☴
+# ☙       ☝       ☡       ☥       ☩       ☭       ☱
+# $ perl -C -e 'printf "%X: %s\n",$_,chr($_) for 0x2630..0x2650'
+# $ perl -mcharnames -C -e 'printf "%04X: %s # %s\n",$_,chr($_),charnames::viacode($_) for 0x2630..0x2650'
+# 2630: ☰ # TRIGRAM FOR HEAVEN
+# 2631: ☱ # TRIGRAM FOR LAKE
+# 2632: ☲ # TRIGRAM FOR FIRE
+# 2633: ☳ # TRIGRAM FOR THUNDER
+#  uni trigram
+# 2630 ☰ TRIGRAM FOR HEAVEN
+# 2631 ☱ TRIGRAM FOR LAKE
+# 2632 ☲ TRIGRAM FOR FIRE
+# 2633 ☳ TRIGRAM FOR THUNDER
+# 2634 ☴ TRIGRAM FOR WIND
+# 2635 ☵ TRIGRAM FOR WATER
+# 2636 ☶ TRIGRAM FOR MOUNTAIN
+# 2637 ☷ TRIGRAM FOR EARTH
+# uni 260.
