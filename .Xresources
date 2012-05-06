@@ -1,0 +1,70 @@
+! URxvt.* is for rxvt-unicode
+! rxvt-unicode +sb  -tr -tint white -sh 50 -fade 80 
+! rxvt -fn 'xft:Bitstream Vera Sans Mono:pixelsize=13'
+! BSB from /etc/X11/app-defaults/URxvt
+!URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=13,\
+!	-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+
+! For the patched urxvt
+! http://lists.schmorp.de/pipermail/rxvt-unicode/2007q4/000514.html
+URxvt.font: xft:DejaVu Sans Mono-10,\
+-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+!URxvt.font: xft:DejaVu Sans Mono-11:dpi=81,\
+
+! A slightly smaller font
+! -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
+
+! uncomment to get rxvt-unicode terminfo compatibility. Also read
+! README.Debian.gz and generate the terminfo file in this case.
+! URxvt.termName: rxvt-unicode
+
+! Color/font settings like in Debians uxterm
+!
+URxvt.color0: black
+URxvt.color1: red3
+URxvt.color2: green3
+URxvt.color3: yellow3
+URxvt.color4: DodgerBlue1
+URxvt.color5: magenta3
+URxvt.color6: cyan3
+URxvt.color7: gray90
+URxvt.color8: gray50
+URxvt.color9: red
+URxvt.color10: green
+URxvt.color11: yellow
+URxvt.color12: SteelBlue1
+URxvt.color13: magenta
+URxvt.color14: cyan
+URxvt.color15: white
+URxvt.colorUL: white
+URxvt.colorBD: white
+URxvt.colorRV: darkgrey
+URxvt.reverseVideo: true
+
+URxvt.scrollBar: false
+!URxvt.fading: 85
+URxvt.fading: 15
+URxvt.shading: 50
+URxvt.tintColor: white
+URxvt.inheritPixmap: true
+
+!URxvt.cutchars: see rex version
+!URxvt.cutchars: :\\'"&()*,;<=>?@[]{|}
+
+! This needs frills compiled in:
+URxvt.tripleclickwords: true
+URxvt.secondaryScreen: false
+
+URxvt.urlLauncher: sensible-browser
+URxvt.internalBorder: 0
+
+! See urxvt.pm
+!URxvt.perl-ext-common: default,selection-autotransform
+! BSB disabled in jaunty, trying to stop http://tinyurl.com/r3obrx
+URxvt.perl-ext-common: default,-selection-popup,-option-popup
+URxvt.selection.pattern-0: ( at .*? line \\d+)
+URxvt.selection-autotransform.0: s/^ at (.*?) line (\\d+)]$/vi +$2 \\Q$1\E\x0d/
+
+! Default is lpr, but I keep accidentally hitting Print
+URxvt.print-pipe: cat > $(TMPDIR=$HOME mktemp urxvt.XXXXXX)
+
