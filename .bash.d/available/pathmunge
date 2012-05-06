@@ -19,4 +19,6 @@ fi
 
 # pathmunge /usr/X11R6/bin after
 
-unset pathmunge
+# unset pathmunge
+
+# vim: syntax=sh :
