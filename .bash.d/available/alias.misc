@@ -1,0 +1,14 @@
+# various big nasty misc commands
+
+# for f in *.mp4; do extract_mp3 $f ${f/mp4/mp3} ; done
+alias extract_mp3='mencoder -of rawaudio -oac mp3lame -ovc copy -o '
+                                                            # out.mp3 in.flv
+
+alias encmount='encfs -i 120 ~/.crypt ~/crypt'
+
+alias uniterm='LC_CTYPE=en_GB.UTF-8 rxvt-unicode -vb  -fg grey +sb -tint darkgrey -sh 80 -tr -fn -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1 -geom 80x40'
+
+# http://www.inf.enst.fr/~demaille/a2ps/doc-4.12/a2ps_3.html#SEC24
+alias ap='a2ps --verbose --medium=A4dj --portrait --columns=2 --tabsize=4 --pretty-print --output=- '
+
+# vim: syntax=sh :

@@ -1,0 +1,18 @@
+# bash aliases for git
+alias gti='git'
+alias gci='git commit -v'
+alias gcia='git commit -v -a'
+alias ga='git add'
+alias gap='git add -p'
+alias gl='git log'
+alias gdi='git diff --no-prefix'
+alias gds='git diff --stat'
+alias gst='git status | head -n 30'
+alias gls='git log --stat'
+alias glp='git log -p'
+alias glo='git log --pretty=oneline'
+alias gbr='git branch'
+alias gsh='git show'
+alias gss='git show --stat'
+
+# vim: syntax=sh :

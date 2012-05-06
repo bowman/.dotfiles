@@ -1,0 +1,64 @@
+
+type -t has > /dev/null || . .bash.d/available/func.has
+
+alias s='cd ..'
+alias d='ls'
+alias ls='ls -Fh'
+alias la='ls -Fha'
+alias lss='ls -Fhs'
+alias ll='ls -Fhl'
+alias m='less -E'
+alias lo='locate'
+alias h='head'
+alias t='tail'
+alias tf='tail -f'
+alias du='du -h'
+alias df='df -h'
+alias g='egrep -r'
+alias cg='GREP_OPTIONS=--color=auto GREP_COLOR=1\;32 egrep -r'
+alias cgh='GREP_COLORS=ms=07\;32 egrep --color '$'[\x80-\xff]'
+alias sort='env LC_ALL=C sort'
+alias c=clear
+alias vi=vim
+alias ci=vim
+alias xo='xclip -o'
+alias tstamp='date "+%Y-%m-%d"'
+alias tst='date "+%Y-%m-%d"'
+alias mkdir='mkdir -p'
+alias hf='history | g'
+alias ef='printenv|grep -i'
+
+# debian bad habits
+alias agi='sudo apt-get install'
+alias acs='apt-cache search'
+alias acsh='apt-cache show'
+alias asv='apt-show-versions -a'
+alias dgs='dpkg --get-selections'
+alias dgsg='dgs | g'
+
+has safe_rm.pl  && alias rm='~/bin/safe_rm.pl'
+alias rrm='/bin/rm'
+
+alias p='perl -MYAML -le "print STDOUT " -e'
+alias perll='perl -MClass::Autouse=:superloader'
+alias add="perl -nle '/(\d+)/ and \$s+=\$1; END { print \$s}'"
+alias pltrace='PERLDB_OPTS="NonStop=1 AutoTrace=1 frame=2" perl -dS'
+alias http="plackup -MPlack::App::Directory -e'Plack::App::Directory->new->to_app'"
+
+alias nocr='perl -pi -e "s/\cM$//; s/\cM/\n/g"'
+alias t2nl="perl -pe 's/\t/\n/g;'"
+alias hichars="perl -nle 'print qq{$.: $_} if grep {ord($_)>127} split//'"
+
+alias lock='xscreensaver-command -lock'
+alias halt='sudo halt'
+
+alias indent='indent -nut'
+alias cols="perl -le 'print \"123456789_\" x 8'"
+
+# preferred apps and names
+has colordiff  && alias cdiff='colordiff'
+has pinfo      && alias info='pinfo'
+has aiksaurus  && alias thesaurus="aiksaurus"
+alias gs='echo "Use gv"'
+
+# vim: syntax=sh :
