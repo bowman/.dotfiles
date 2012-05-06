@@ -1,0 +1,29 @@
+
+function mcd {
+    local dir="$1"
+    mkdir -p "$dir" && cd "$dir"
+}
+
+# mkdir $1 and move the rest in there
+function mvcd {
+    local dir="$1"
+    shift
+    mkdir -p "$dir" && mv "$@" "$dir" && cd "$dir"
+}
+
+# view -f details of pgreped processes
+function pgf {
+    ps -fp $(pgrep -d, $*)
+}
+
+#alias puzzle="an -w -d /home/bsb/words/yawl-0.3.2/word.list -m 9"
+function puzzle {
+    words=${WORDS:-/usr/share/dict/words}
+    for w in "$@"; do
+        echo "# $w"
+        an -w -d $words -m ${#w} "$w"
+    done;
+}
+
+
+# vim: syntax=sh :

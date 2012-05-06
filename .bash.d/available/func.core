@@ -1,0 +1,115 @@
+
+function mcd {
+    local dir="$1"
+    mkdir -p "$dir" && cd "$dir"
+}
+
+# mkdir $1 and move the rest in there
+function mvcd {
+    local dir="$1"
+    shift
+    mkdir -p "$dir" && mv "$@" "$dir" && cd "$dir"
+}
+
+# view -f details of pgreped processes
+function pgf {
+    ps -fp $(pgrep -d, $*)
+}
+
+#alias puzzle="an -w -d /home/bsb/words/yawl-0.3.2/word.list -m 9"
+function puzzle {
+    words=${WORDS:-/usr/share/dict/words}
+    for w in "$@"; do
+        echo "# $w"
+        an -w -d $words -m ${#w} "$w"
+    done;
+}
+
+# shared accounts
+function sshs {
+    ssh -t  $* "bash --rcfile .bashrc.source_all -i -";
+}
+# .bashrc.source_all should be:
+# . /etc/bash.bashrc .bashrc .bashrc.$USER .bashrc.$USER_local
+
+# Find a file with a pattern in name:
+# XXX -wholename can handle paths but should only be used if
+# there is a '/' in the query (and should be used with a leading *)
+function f {
+    local query=$1;
+    [ -n "$query" ] || return;
+    local found=`find . -name $query`;
+    # XXX -path fallback for 'f this/that'
+    if [ -z "$found" ]; then
+        found=`find . -name "$query*"`
+        [ -z "$found" ] && return ;
+    fi;
+    echo "$found";
+};
+
+function fv {
+    local query=$1;
+    [ -n "$query" ] || return;
+    local found=`find . -type f -name $query`;
+    if [ -z "$found" ]; then
+        found=`find . -type f -name "$query*"`
+        [ -z "$found" ] && return ;
+    fi;
+    [ -z "$found" ] && return ;
+    #local edit=`iselect -a -m "$found"`;
+    #[ -n "$edit" ] && vi "$edit";
+
+    # reading array http://tinyurl.com/la6juc
+    # allows -m option to work
+    local OIFS="$IFS"
+    IFS=$'\n';
+    set -f ;
+    local edit=( $(iselect -a -m "$found" ) ) ;
+    set +f ;
+    IFS="$OIFS"
+
+    #perl -le 'print join"|",@ARGV' ${edit[@]};
+    # eval to get actual file names in job control
+    # eval $(shq vi ${edit[@]}) # protect
+    # eval $(shell-quote vi ${edit[@]}) # protect
+    [ -n "$edit" ] && eval vi "${edit[@]}";
+};
+
+function lv {
+    local found=`locate $1`;
+    [ -z "$found" ] && return ;
+    local edit=`iselect -a -m "$found"`;
+    [ -n "$edit" ] && eval vi "${edit[@]}";
+};
+
+function pv {
+    local OIFS="$IFS"
+    IFS=$'\n';
+    set -f ;
+    local found=( $(pmpath "$@" ) ) ;
+    set +f ;
+    IFS="$OIFS"
+
+    [ -z "$found" ] && return ;
+    eval vi "${found[@]}";
+};
+
+function wv {
+    local found=`which $1`;
+    [ -z "$found" ] && return ;
+    eval vi "${found[@]}";
+};
+
+function fcd {
+    local query=$1;
+    [ -n "$query" ] || return;
+    local found=`find . -type d -name $query`;
+    if [ -z "$found" ]; then
+        found=`find . -type d -name "$query*"`
+        [ -z "$found" ] && return ;
+    fi;
+    local dir=`iselect -a "$found"`;
+    [ -n "$dir" ] && echo "cd $dir" && cd "$dir";
+};
+
+# vim: syntax=sh :
