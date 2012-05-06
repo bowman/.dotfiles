@@ -1,0 +1,6 @@
+
+set completion-query-items 2200
+set show-all-if-ambiguous
+set bell-style none
+
+# vim: syntax=sh :

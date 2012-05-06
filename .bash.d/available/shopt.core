@@ -1,0 +1,6 @@
+# Need histverify, rest are optional
+shopt -s histverify
+shopt -s cdspell extglob no_empty_cmd_completion cmdhist globstar histappend
+shopt -u force_fignore dotglob
+
+# vim: syntax=sh :
