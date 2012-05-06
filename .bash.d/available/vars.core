@@ -1,0 +1,31 @@
+export FIGNORE=".o:.bak:CVS:.swp:.bak:blib:.hi"
+export GLOBIGNORE="*.o:*.bak:CVS:.*.swp:*.bak:blib"
+export EDITOR="vim"
+
+export BROWSER="seamonkey -remote openurl(%s,new-tab):seamonkey"
+
+export MANOPT='-E ascii'  # avoid apostrophes going unicode
+
+export LC_COLLATE=C
+
+eval "$(lesspipe)" # Set LESSOPEN and LESSCLOSE
+export LESS="--no-init --quit-if-one-screen --ignore-case --LONG-PROMPT --QUIET"
+export GIT_PAGER="less -R"
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoreboth
+export HISTIGNORE="reboot:halt:exit:fg:bg:ls:rm *:rrm *"
+
+# app overrides
+export MYSQL_PS1='prompt mysql\_\h:\d>\_'
+export RSYNC_RSH="ssh"
+export PSQL_EDITOR="/usr/bin/vim -c ':set syntax=sql'"
+
+# remove ':' from completion word breaks so man Some::Perl doesn't escape
+# http://tiswww.case.edu/php/chet/bash/FAQ   /E13
+export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+
+[ -r "$HOME/words/yawl-0.3.2/word.list" ] &&
+    export WORDS="$HOME/words/yawl-0.3.2/word.list"
+
+# vim: syntax=sh :

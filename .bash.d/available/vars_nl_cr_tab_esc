@@ -1,7 +1,0 @@
-## bash and ksh93 specific;
-## in other shells, replace the $'\X' with a literal character
-##            DEC   OCT   HEX
-NL=$'\n'   ##  10, \012, 0x0a, a literal newline
-CR=$'\r'   ##  13, \015, 0x0d, carriage return
-TAB=$'\t'  ##   9, \011, 0x09, tab
-ESC=$'\e'  ##  27, \033, 0x1b, escape
