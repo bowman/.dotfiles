@@ -28,7 +28,8 @@ function puzzle {
 # dotbash vars.ps1
 function dotbash {
     for w in "$@"; do
-        echo "# $w"
+        # XXX check -r ".bash.d/available/$w"
+        echo "# $w => .bash.d/available/$w"
         . ".bash.d/available/$w"
     done;
 }
