@@ -1,0 +1,82 @@
+[include]
+    path = .gitconfig.github
+    path = .gitconfig.user
+
+[color]
+    diff = auto
+
+[alias]
+    # http://git.or.cz/gitwiki/Aliases
+    #co = checkout # too potentially dangerous to be 1 char away from ci
+    ci = commit -v
+    cia = commit -v -a
+    di = diff --no-prefix
+    ds = diff --stat
+    st = status
+    ls = log --stat
+    lp = log -p
+    lo = log --pretty=oneline
+    br = branch
+    diffwords = diff --word-diff
+    ss = show --stat
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD^
+    reshuffle = rebase -i origin/master
+
+    rebranch = branch -f
+    # 2009-05-26  (merged-blah) 6fe85ff regenerate something Author Name
+    logdate = log --format=format:'%ad %d %h %s %an%n' --date=short
+    brdate = !"sh -c 'for b in `git branch --no-merged` ; \
+                do git logdate -1 -r $b --; done'"
+
+    svnpush = svn dcommit
+    svnpull = svn rebase
+
+    # find duplicate files
+    dupes = !"git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
+
+    pick = cherry-pick -s
+
+    save = stash save
+    pop = stash pop
+
+    praise = blame -w
+    archeology = blame -w -C -n
+    whodoikill = blame -w -C -n
+    logfile = log --follow -C
+    plog = !git log --pretty=olcolour --graph --all
+    who = shortlog -sen --
+    grep4d = !sh -c 'git log -p -S$1 $2' -
+
+
+    # autosquash
+    #git commit -m 'squash!' some_file; git rebase -i --autosquash HEAD^
+    #git log -1 --pretty="fixup! %h" HEAD^ | git commit -F -
+
+    # added git-show-dc in path instead
+    dst = log --stat --pretty=oneline --abbrev-commit trunk..
+    # git diff --stat trunk HEAD
+    #show-dc = "!dcn() { git svn dcommit -n | perl -nle '$f or ($f) = /^diff-tree (\\S+)/; ($t) = / (\\S+)$/; END { print qq{$f $t} }'; }; git diff --stat `dcn`"
+    # This produces output that can be displayed using dotty, for example:
+    # $ git graphviz HEAD~100..HEAD~60 | dotty /dev/stdin
+    #graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    # think this needs a newer git
+
+    unstage = reset HEAD
+    redo = reset --soft HEAD^
+    clear = reset --hard HEAD
+    undo = reset --hard HEAD^
+
+    repull = pull --rebase
+
+    hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+    tt=timetrack
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lol = log --oneline --graph --decorate
+
+[pretty]
+    olcolour = format:%C(yellow)%h%Creset %s %Cblue%d%Creset
+    brlog = tformat:%C(yellow)%d%Creset %h%n %an, %ar%n%s%n
+
+[rebase]
+    autosquash = 1
