@@ -18,7 +18,7 @@ if [ "$PS1" ]; then
     . .bash.d/available/alias.core
     . .bash.d/available/alias.git
     . .bash.d/available/alias.misc
-    #. .bash.d/available/complete.core
+    . .bash.d/available/complete.core
 
     # echo 'echo "Appointment 12:30" | write '$USER | at 12:00 tomorrow
     # echo 'notify-send "Appointment 12:30"' | at 12:00 tomorrow
