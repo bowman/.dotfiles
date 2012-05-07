@@ -1,0 +1,12 @@
+# readline's ~/.inputrc file
+
+# Ctrl-P for output of previous command
+$if Bash
+    # output of previous command (\r to expand !! under histverify)
+    Control-p: " $(!!)\r"
+$endif
+
+# do not bell on tab-completion
+set bell-style none
+set show-all-if-ambiguous on
+set completion-query-items 500
