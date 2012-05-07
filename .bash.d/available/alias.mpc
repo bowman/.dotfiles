@@ -1,0 +1,52 @@
+alias volume='mpc volume'
+alias vol='mpc volume'
+alias v='mpc volume'
+alias next='mpc next'
+alias n='mpc next'
+alias prev='mpc prev'
+alias play='mpc play'
+alias pause='mpc pause'
+alias toggle='mpc toggle'
+alias t='mpc toggle'
+alias stop='mpc stop'
+alias playlist='mpc playlist'
+alias pl='mpc playlist'
+alias add='mpc add'
+alias cladd='mpc clear; mpc add'
+
+# mpc version: 0.12.0
+# mpc                                 Displays status
+# mpc add <file>                      Add a song to the current playlist
+# mpc crop                            Remove all songs except for the currently
+# mpc del <position>                  Remove a song from the current playlist
+# mpc play [<position>]               Start playing at <position> (default: 1)
+# mpc next                            Play the next song in the current playlist
+# mpc prev                            Play the previous song in the current
+# mpc pause                           Pauses the currently playing song
+# mpc toggle                          Toggles Play/Pause, plays if stopped
+# mpc stop                            Stop the currently playing playlists
+# mpc seek [+-][HH:MM:SS] or <0-100>% Seeks to the specified position
+# mpc clear                           Clear the current playlist
+# mpc outputs                         Show the current outputs
+# mpc enable <output #>               Enable a output
+# mpc disable <output #>              Disable a output
+# mpc shuffle                         Shuffle the current playlist
+# mpc move <from> <to>                Move song in playlist
+# mpc playlist                        Print the current playlist
+# mpc listall [<file>]                List all songs in the music dir
+# mpc ls [<directory>]                List the contents of <directory>
+# mpc lsplaylists                     Lists currently available playlists
+# mpc load <file>                     Load <file> as a playlist
+# mpc save <file>                     Saves a playlist as <file>
+# mpc rm <file>                       Removes a playlist
+# mpc volume [+-]<num>                Sets volume to <num> or adjusts by
+# [+-]<num>
+# mpc repeat <on|off>                 Toggle repeat mode, or specify state
+# mpc random <on|off>                 Toggle random mode, or specify state
+# mpc search <type> <queries>         Search for a song
+# mpc crossfade [<seconds>]           Set and display crossfade settings
+# mpc update [<path>]                 Scans music directory for updates
+# mpc stats                           Displays statistics about MPD
+# mpc version                         Reports version of MPD
+# 
+# vim:set syntax=bash
