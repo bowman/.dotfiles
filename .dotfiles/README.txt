@@ -63,6 +63,7 @@ git rev-parse HEAD FETCH_HEAD   # what do they point to
 git diff --stat HEAD FETCH_HEAD # differences
 git merge-base HEAD FETCH_HEAD  # common ancestor
 for r in HEAD FETCH_HEAD; do echo $r ; git log --oneline $r | head -1; done
+git name-rev $( git merge-base HEAD FETCH_HEAD )
 
 # peek at index
 git ls-files --directory --exclude-standard --stage
