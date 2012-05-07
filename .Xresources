@@ -1,9 +1,9 @@
 ! URxvt.* is for rxvt-unicode
-! rxvt-unicode +sb  -tr -tint white -sh 50 -fade 80 
+! rxvt-unicode +sb  -tr -tint white -sh 50 -fade 80
 ! rxvt -fn 'xft:Bitstream Vera Sans Mono:pixelsize=13'
 ! BSB from /etc/X11/app-defaults/URxvt
 !URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=13,\
-!	-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+!   -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
 
 ! For the patched urxvt
 ! http://lists.schmorp.de/pipermail/rxvt-unicode/2007q4/000514.html
@@ -67,4 +67,3 @@ URxvt.selection-autotransform.0: s/^ at (.*?) line (\\d+)]$/vi +$2 \\Q$1\E\x0d/
 
 ! Default is lpr, but I keep accidentally hitting Print
 URxvt.print-pipe: cat > $(TMPDIR=$HOME mktemp urxvt.XXXXXX)
-
