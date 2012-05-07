@@ -36,6 +36,10 @@ alias asv='apt-show-versions -a'
 alias dgs='dpkg --get-selections'
 alias dgsg='dgs | g'
 
+# switch git dotfile management on and off
+alias doton='. ~/.dotfiles/on'
+alias dotoff='. ~/.dotfiles/off'
+
 has safe_rm.pl  && alias rm='~/bin/safe_rm.pl'
 alias rrm='/bin/rm'
 
