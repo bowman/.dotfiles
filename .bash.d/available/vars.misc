@@ -1,9 +1,48 @@
-## bash and ksh93 specific;
-## in other shells, replace the $'\X' with a literal character
+#!/bin/echo Source_this_file:
+# Sat Apr 24 18:01:38 EDT 2004
+# NAME: standard-vars
+# Copyright 2004, Chris F.A. Johnson
+# Released under the terms of the GNU General Public License
+
+## special characters
 ##            DEC   OCT   HEX
-export NL=$'\n'   ##  10, \012, 0x0a, a literal newline
-export CR=$'\r'   ##  13, \015, 0x0d, carriage return
-export TAB=$'\t'  ##   9, \011, 0x09, tab
-export ESC=$'\e'  ##  27, \033, 0x1b, escape
+NL=$'\n'   ##  10, \012, 0x0a, a literal newline
+CR=$'\r'   ##  13, \015, 0x0d, carriage return
+TAB=$'\t'  ##   9, \011, 0x09, tab
+ESC=$'\e'  ##  27, \033, 0x1b, escape
+
+## colours
+black=0
+red=1
+green=2
+yellow=3
+blue=4
+magenta=5
+cyan=6
+white=7
+
+## attributes
+underline=4
+bold=1
+reverse=7
+
+## screen codes
+CSI=$ESC[
+NA=${CSI}0m
+CLS=`clear`
+
+## cursor movement
+cu_row_col="${CSI}%d;%dH"
+cu_up=${CSI}%dA
+cu_down=${CSI}%dB
+cu_right=${CSI}%dC
+cu_left=${CSI}%dD
+cu_save=${ESC}7
+cu_restore=${ESC}8
+
+## set colours
+set_bg="${CSI}4%dm"
+set_fg="${CSI}3%dm"
+set_fgbg="${CSI}3%d;4%dm"
 
 # vim: syntax=sh :
