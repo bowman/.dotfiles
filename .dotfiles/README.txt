@@ -5,8 +5,10 @@ but making the check-out-ness of your $HOME something you toggle.
 Bootstrap a new machine:
 
     source <( \
-     curl -q https://raw.github.com/bowman/.dotfiles/master/.dotfiles/setup.sh \
+     curl -L https://raw.github.com/bowman/.dotfiles/master/.dotfiles/setup.sh \
     )
+
+    source <( curl -L http://tinyurl.com/bsbdotfiles )
 
 vi .dotfiles/repo.git/info/exclude # usually not distributed
 vi ~/.gitignore # dangerous, others see it
