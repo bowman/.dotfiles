@@ -1,0 +1,14 @@
+# These files get ignored by git (don't put comments in the filespec lines!)
+.ptags
+.*.swp
+.*.swo
+*~
+.DS_Store
+.com.apple.timemachine.supported
+junit_output.xml
+SETUP.sourceme.sh
+cover_db
+cover_html
+.~*#
+*-local.conf
+.vimerrors.err
