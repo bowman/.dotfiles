@@ -3,19 +3,4 @@ has () {
     type -t "$1" > /dev/null
 }
 
-has_all () {
-    type -t "$@" > /dev/null
-}
-
-# has_then aiksaurus alias thesaurus='aiksaurus'
-has_then () {
-    if type -t "$1" > /dev/null ; then
-        shift
-        # echo "$@"
-        "$@" # do it (not sure about this)
-    # else
-    #     echo "has_then: no '$1' for $@"
-    fi
-}
-
 # vim: syntax=sh :
