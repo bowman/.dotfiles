@@ -25,6 +25,14 @@ function puzzle {
     done;
 }
 
+# dotbash vars.ps1
+function dotbash {
+    for w in "$@"; do
+        echo "# $w"
+        . ".bash.d/available/$w"
+    done;
+}
+
 # shared accounts
 function sshs {
     ssh -t  $* "bash --rcfile .bashrc.source_all -i -";
