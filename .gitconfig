@@ -6,10 +6,9 @@
     diff = auto
 
 [alias]
-    # http://git.or.cz/gitwiki/Aliases
-    #co = checkout # too potentially dangerous to be 1 char away from ci
     ci = commit -v
     cia = commit -v -a
+    #co = checkout # too potentially dangerous to be 1 char away from ci
     di = diff --no-prefix
     ds = diff --stat
     st = status
@@ -57,10 +56,19 @@
     dst = log --stat --pretty=oneline --abbrev-commit trunk..
     # git diff --stat trunk HEAD
     #show-dc = "!dcn() { git svn dcommit -n | perl -nle '$f or ($f) = /^diff-tree (\\S+)/; ($t) = / (\\S+)$/; END { print qq{$f $t} }'; }; git diff --stat `dcn`"
+    # https://git.wiki.kernel.org/index.php/Aliases
+    # new commits have been created by the last command
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+
     # This produces output that can be displayed using dotty, for example:
     # $ git graphviz HEAD~100..HEAD~60 | dotty /dev/stdin
-    #graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
-    # think this needs a newer git
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    empty-tree-sha1 = hash-object -t tree /dev/null
+    # check work tree for whitespace violations
+    ws = !"git diff --check $(git empty-tree-sha1)"
 
     unstage = reset HEAD
     redo = reset --soft HEAD^
