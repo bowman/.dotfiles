@@ -28,7 +28,7 @@ alias mkdir='mkdir -p'
 alias hf='history | g'
 alias ef='printenv|grep -i'
 
-# debian bad habits
+# debian bad habits http://pthree.org/2007/08/12/aptitude-vs-apt-get
 alias agi='sudo apt-get install'
 alias acs='apt-cache search'
 alias acsh='apt-cache show'
