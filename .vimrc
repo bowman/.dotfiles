@@ -1,3 +1,6 @@
+" agi vim-scripts vim-addon-manager
+" vim-addons
+" vim-addons install sokoban
 
 if filereadable('.vimrc.perl_id')
     :source .vimrc.perl_id
@@ -98,6 +101,12 @@ endif
 
 if version >= 600
     let perl_fold = 1
+endif
+
+if version >= 730
+    " untested but sounds cool
+    set undofile
+    " set undodir
 endif
 
 let g:cvimsyn="$VIM/dict"
