@@ -2,5 +2,6 @@
 has () {
     type -t "$1" > /dev/null
 }
+# srcif() { for i in "$@"; do [[ -f "$i" ]] && . "$i"; done; }
 
 # vim: syntax=sh :
