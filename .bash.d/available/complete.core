@@ -4,7 +4,6 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# BROKEN:
 
 # adapted from /etc/bash_completion.d/perl
 _pv_perlmodules() {
@@ -12,11 +11,16 @@ _pv_perlmodules() {
     COMPREPLY=()
     cur=$(_get_cword)
 
+    # See /etc/bash_completion __ltrim_colon_completions
+    # and Bash FAQ e13 for hints
+    COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+
+    # defined in /etc/bash_completion.d/perl
     _perlmodules
 }
 
 for p_cmd in pv pmpath pmdesc pmvers pmcat; do
-    echo complete -F _pv_perlmodules $p_cmd
+    complete -F _pv_perlmodules $p_cmd
 done
 
 # vim: syntax=sh :
