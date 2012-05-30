@@ -26,6 +26,7 @@ function puzzle {
 }
 
 # dotdo vars.ps1
+# (set -x ; source /home/bsb/.bash.d/available/vars.perl ) # traces
 function dotdo {
     for w in "$@"; do
         # TODO match globs
