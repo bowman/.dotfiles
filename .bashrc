@@ -4,6 +4,7 @@
 # If running interactively, then:
 if [ "$PS1" ]; then
 
+    # run-parts --help
     . .bash.d/available/set.core
     . .bash.d/available/shopt.core
     . .bash.d/available/func.has # aliases need
