@@ -4,22 +4,21 @@
 # If running interactively, then:
 if [ "$PS1" ]; then
 
-    # run-parts --help
-    . .bash.d/available/set.core
-    . .bash.d/available/shopt.core
-    . .bash.d/available/func.has # aliases need
-    . .bash.d/available/func.core
-    . .bash.d/available/func.misc
-    #. .bash.d/available/func.cd
-    . .bash.d/available/vars.path
-    . .bash.d/available/vars.core
-    . .bash.d/available/vars.ps1
-    . .bash.d/available/vars.perl
-    . .bash.d/available/vars.misc
-    . .bash.d/available/alias.core
-    . .bash.d/available/alias.git
-    . .bash.d/available/alias.misc
-    . .bash.d/available/complete.core
+    . ~/.bash.d/available/set.core
+    . ~/.bash.d/available/shopt.core
+    . ~/.bash.d/available/func.has # aliases need
+    . ~/.bash.d/available/func.core
+    . ~/.bash.d/available/func.misc
+    #. ~/.bash.d/available/func.cd
+    . ~/.bash.d/available/vars.path
+    . ~/.bash.d/available/vars.core
+    . ~/.bash.d/available/vars.ps1
+    . ~/.bash.d/available/vars.perl
+    . ~/.bash.d/available/vars.misc
+    . ~/.bash.d/available/alias.core
+    . ~/.bash.d/available/alias.git
+    . ~/.bash.d/available/alias.misc
+    . ~/.bash.d/available/complete.core
 
     # echo 'echo "Appointment 12:30" | write '$USER | at 12:00 tomorrow
     # echo 'notify-send "Appointment 12:30"' | at 12:00 tomorrow
@@ -27,7 +26,7 @@ if [ "$PS1" ]; then
 
     # If this is an xterm set the title to user@host:dir
     case $TERM in
-    xterm*|rxvt*)
+    xterm*|rxvt*|screen)
        export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
         ;;
     *)
