@@ -4,9 +4,11 @@
 # If running interactively, then:
 if [ "$PS1" ]; then
 
+    . ~/.bash.d/available/func.has # aliases need
+    . ~/.bash.d/available/complete.core # vars.ps1 needs
+
     . ~/.bash.d/available/set.core
     . ~/.bash.d/available/shopt.core
-    . ~/.bash.d/available/func.has # aliases need
     . ~/.bash.d/available/func.core
     . ~/.bash.d/available/func.misc
     #. ~/.bash.d/available/func.cd
@@ -18,7 +20,6 @@ if [ "$PS1" ]; then
     . ~/.bash.d/available/alias.core
     . ~/.bash.d/available/alias.git
     . ~/.bash.d/available/alias.misc
-    . ~/.bash.d/available/complete.core
 
     # echo 'echo "Appointment 12:30" | write '$USER | at 12:00 tomorrow
     # echo 'notify-send "Appointment 12:30"' | at 12:00 tomorrow

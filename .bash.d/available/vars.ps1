@@ -1,6 +1,8 @@
 # set a fancy prompt
 # PS1='\u@\h:\w\$ '
 
+## DEPS: complete.core func.has
+
 type -t has > /dev/null || . .bash.d/available/func.has
 
 # export PROMPT_DIRTRIM=2

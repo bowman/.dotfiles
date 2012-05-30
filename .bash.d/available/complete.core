@@ -1,3 +1,4 @@
+# depended on by vars.ps1 for git prompt
 
 # enable bash completion in interactive shells
 if [ -f /etc/bash_completion ]; then

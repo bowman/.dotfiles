@@ -1,3 +1,4 @@
+# depended on by alias.core and vars.ps1 (at least)
 # conditional aliasing
 has () {
     type -t "$1" > /dev/null

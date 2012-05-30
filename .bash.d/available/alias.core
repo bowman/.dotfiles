@@ -1,4 +1,6 @@
 
+## DEPS: func.has
+
 type -t has > /dev/null || . .bash.d/available/func.has
 
 alias s='cd ..'
