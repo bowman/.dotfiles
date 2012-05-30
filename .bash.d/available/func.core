@@ -25,13 +25,17 @@ function puzzle {
     done;
 }
 
-# dotbash vars.ps1
-function dotbash {
+# dotdo vars.ps1
+function dotdo {
     for w in "$@"; do
-        # XXX check -r ".bash.d/available/$w"
-        echo "# $w => .bash.d/available/$w"
-        . ".bash.d/available/$w"
-    done;
+        # TODO match globs
+        if [ -r "$HOME/.bash.d/available/$w" ] ; then
+            echo "# $w => $HOME/.bash.d/available/$w"
+            . "$HOME/.bash.d/available/$w"
+        else
+            echo "# '$w' not found"
+        fi
+    done
 }
 
 # shared accounts
