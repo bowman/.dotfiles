@@ -35,6 +35,7 @@ alias acsh='apt-cache show'
 alias asv='apt-show-versions -a'
 alias dgs='dpkg --get-selections'
 alias dgsg='dgs | g'
+alias dL='dpkg -L'
 
 # switch git dotfile management on and off
 alias doton='. ~/.dotfiles/on'
