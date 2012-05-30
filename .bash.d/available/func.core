@@ -103,6 +103,7 @@ function pv {
     eval vi "${found[@]}";
 };
 
+# TODO multiple args
 function wv {
     local found=`which $1`;
     [ -z "$found" ] && return ;
