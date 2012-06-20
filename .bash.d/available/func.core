@@ -82,10 +82,12 @@ function fv {
     set +f ;
     IFS="$OIFS"
 
+    # http://mywiki.wooledge.org/BashFAQ/050 048
     #perl -le 'print join"|",@ARGV' ${edit[@]};
     # eval to get actual file names in job control
     # eval $(shq vi ${edit[@]}) # protect
     # eval $(shell-quote vi ${edit[@]}) # protect
+    # eval $(printf "%q " "$@")
     [ -n "$edit" ] && eval vi "${edit[@]}";
 };
 
