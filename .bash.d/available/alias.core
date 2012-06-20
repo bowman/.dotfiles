@@ -60,7 +60,9 @@ alias lock='xscreensaver-command -lock'
 alias halt='sudo halt'
 
 alias indent='indent -nut'
-alias cols="perl -le 'print \"123456789_\" x 8'"
+#alias cols="perl -le 'print \"123456789_\" x 8'"
+alias cols="perl -le 'print map \$_ x 10, 0..7; print q{0123456789} x 8'"
+
 
 # preferred apps and names
 has colordiff  && alias cdiff='colordiff'
