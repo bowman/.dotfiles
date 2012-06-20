@@ -90,6 +90,11 @@ autocmd BufRead *.ty set syntax=python
 " for sofa's scenes
 autocmd BufRead *.scn set syntax=xml
 
+" sdt's open-this-module command
+au FileType perl command! -nargs=1 PerlModuleSource :e `perldoc -lm <args>`
+au FileType perl setlocal isfname+=:
+au FileType perl noremap ,pm :PerlModuleSource <cword><cr>
+
 if version >= 500
     let make_bsd = 1
 
