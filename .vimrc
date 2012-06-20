@@ -171,6 +171,9 @@ nmap    ,ds ^d/^--\s*$/<CR>
 " toggle wrapping "inv" = invert
 "nmap W :set invwrap<CR>
 
+
+" delete EOL whitespace
+nmap ds :%s/\s\+$//<CR>
 " from whitepsace.vim
 " syn match Tab "\t"
 " hi def Tab ctermbg=darkgreen guibg=#003000
