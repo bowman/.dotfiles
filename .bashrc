@@ -21,6 +21,8 @@ if [ "$PS1" ]; then
     . ~/.bash.d/available/alias.git
     . ~/.bash.d/available/alias.misc
 
+    srcif ~/.bash.d/identity/debian
+
     # echo 'echo "Appointment 12:30" | write '$USER | at 12:00 tomorrow
     # echo 'notify-send "Appointment 12:30"' | at 12:00 tomorrow
     # echo 'notify-send -u critical -t 1000000 "THING"' | at 8:31
