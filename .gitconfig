@@ -88,3 +88,5 @@
 
 [rebase]
     autosquash = 1
+[diff]
+    mnemonicprefix = true
