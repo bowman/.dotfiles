@@ -25,6 +25,9 @@ else
     fi
 
     export PS1=$PS1']$ '
+    function ps1_nl () { # when the prompt gets too long
+        PS1=${PS1%]$ }$']\n$ '
+    }
 fi
 
 # vim: syntax=sh :
