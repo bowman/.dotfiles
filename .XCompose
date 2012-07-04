@@ -2,7 +2,7 @@
 include "%L"
 
 # personal shortcuts
-include .XCompose.local
+include "%H/.XCompose.local"
 
 <Multi_key> <less> <minus> : "←" U2190
 <Multi_key> <bar> <asciicircum> : "↑" U2191
