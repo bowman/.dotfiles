@@ -17,7 +17,7 @@ include "%H/.XCompose.local"
 <Multi_key> <o> <Y> : "☢" U2622
 <Multi_key> <s> <n> <o> : "☃" U2603
 <Multi_key> <b> <u> <g> : "aébçc…d〝e〞f“g”h‘i’j•k½l–m—n o p q r s"
-<Multi_key> <-> <h> : "--help"
+<Multi_key> <minus> <h> : "--help"
 
 # App::Uni
 # $ uni 'greek.*letter'
