@@ -20,7 +20,8 @@
     ss = show --stat
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
-    reshuffle = rebase -i origin/master
+    reshuffle = rebase -i HEAD@{upstream}
+    upstream = rev-parse --symbolic-full-name  --abbrev-ref HEAD@{upstream}
 
     # http://lists-archives.com/git/694641-add-porcelain-option-to-git-push.html
     npush = !"git push -n $* ; \
