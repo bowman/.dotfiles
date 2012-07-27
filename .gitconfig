@@ -22,6 +22,12 @@
     uncommit = reset --soft HEAD^
     reshuffle = rebase -i origin/master
 
+    # http://lists-archives.com/git/694641-add-porcelain-option-to-git-push.html
+    npush = !"git push -n $* ; \
+              git push -n --porcelain $* \
+                | perl -nlE '/\\t([0-9a-f]+\\.\\.[[0-9a-f]+)$/ && say $1' \
+                | xargs git log --stat --oneline"
+
     rebranch = branch -f
     # 2009-05-26  (merged-blah) 6fe85ff regenerate something Author Name
     logdate = log --format=format:'%ad %d %h %s %an%n' --date=short
