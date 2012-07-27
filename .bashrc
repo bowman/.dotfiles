@@ -11,7 +11,7 @@ if [ "$PS1" ]; then
     . ~/.bash.d/available/shopt.core
     . ~/.bash.d/available/func.core
     . ~/.bash.d/available/func.misc
-    #. ~/.bash.d/available/func.cd
+    . ~/.bash.d/available/func.cd
     . ~/.bash.d/available/vars.path
     . ~/.bash.d/available/vars.core
     . ~/.bash.d/available/vars.ps1

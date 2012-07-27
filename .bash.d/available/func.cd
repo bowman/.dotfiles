@@ -1,0 +1,46 @@
+function cd() {
+    builtin cd "$@" || return;
+
+    # Need -w with pipe for 78 sized screen
+    ls -CFh -w $COLUMNS | head -n 25;
+
+    # source .setup_env and .setup_env.$USER if authorized
+    [[ -r .setup_env && -r ~/.setup_env_ok ]] || return;
+
+    if _setup_env_ok; then
+        source ./.setup_env ; # shopt sourcepath
+    fi
+}
+
+function _setup_env_ok () {
+    authorized=0;
+    not_authorized=1;
+
+    if grep -q "^$(sha1sum $(realpath .setup_env))\$" ~/.setup_env_ok; then
+        if [[ -r ".setup_env.$USER" ]] && \
+         ! grep -q "^$(sha1sum $(realpath .setup_env.$USER))\$" ~/.setup_env_ok;
+        then
+            _setup_env_debug ".setup_env.$USER"
+            return $not_authorized;
+        else
+            return $authorized;
+        fi
+    else
+        _setup_env_debug .setup_env
+        return $not_authorized;
+    fi
+    return $not_authorized;
+}
+
+function _setup_env_debug () {
+        file="$1"
+        echo "=== Unregisted, old or bad $file"
+        grep "$(realpath $file)\$" ~/.setup_env_ok
+        ls -la "$file"
+        head -v -n 20 "$file"
+        echo "=== add with:"
+        sha1sum $(realpath $file)
+        echo 'sha1sum $(realpath $file) >> ~/.setup_env_ok'
+}
+
+# vim: syntax=sh :
