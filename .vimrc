@@ -10,6 +10,8 @@ endif
 let g:ftplugin_sql_omni_key_right = '»'
 let g:ftplugin_sql_omni_key_left  = '«'
 
+let g:paredit_mode = 0
+
 iab papp  :r ~/.code_templates/perl_application.pl
 iab pmod  :r ~/.code_templates/perl_module.pm
 
