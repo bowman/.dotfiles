@@ -55,6 +55,9 @@
     plog = !git log --pretty=olcolour --graph --all
     who = shortlog -sen --
     grep4d = !sh -c 'git log -p -S$1 $2' -
+    # who's work am I rewriting?
+    # gdi -U0 --src-prefix=SRC: | perl -nlE '/^@@ -(\d+)(?:,(\d+))? /&&say"-L $1,+",($2||1)," HEAD $s";/--- SRC:(.*)/ and$s=$1' | while read l; do echo; (set -x; git blame  -w --date=short $l); done
+
 
 
     # autosquash
