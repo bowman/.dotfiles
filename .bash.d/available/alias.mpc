@@ -12,7 +12,8 @@ alias stop='mpc stop'
 alias playlist='mpc playlist'
 alias pl='mpc playlist'
 alias add='mpc add'
-alias cladd='mpc clear; mpc add'
+# take '/' off the end of paths
+function cladd { mpc clear; mpc add "${@%/}"; }
 
 # mpc version: 0.12.0
 # mpc                                 Displays status
