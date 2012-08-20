@@ -40,7 +40,7 @@ function _setup_env_debug () {
         head -v -n 20 "$file"
         echo "=== add with:"
         sha1sum $(realpath $file)
-        echo 'sha1sum $(realpath $file) >> ~/.setup_env_ok'
+        echo "sha1sum \$(realpath $file) >> ~/.setup_env_ok"
 }
 
 # vim: syntax=sh :
