@@ -19,6 +19,39 @@ include "%H/.XCompose.local"
 <Multi_key> <b> <u> <g> : "aébçc…d〝e〞f“g”h‘i’j•k½l–m—n o p q r s"
 <Multi_key> <minus> <h> : "--help"
 
+<Multi_key> <g> <r> <a> : "α" # GREEK SMALL LETTER ALPHA
+<Multi_key> <g> <r> <b> : "β" # GREEK SMALL LETTER BETA
+<Multi_key> <g> <r> <g> : "γ" # GREEK SMALL LETTER GAMMA
+<Multi_key> <g> <r> <d> : "δ" # GREEK SMALL LETTER DELTA
+<Multi_key> <g> <r> <e> <p> : "ε" # GREEK SMALL LETTER EPSILON
+<Multi_key> <g> <r> <z> : "ζ" # GREEK SMALL LETTER ZETA
+<Multi_key> <g> <r> <e> <t> : "η" # GREEK SMALL LETTER ETA
+<Multi_key> <g> <r> <t> <h> : "θ" # GREEK SMALL LETTER THETA
+<Multi_key> <g> <r> <i> : "ι" # GREEK SMALL LETTER IOTA
+<Multi_key> <g> <r> <k> : "κ" # GREEK SMALL LETTER KAPPA
+<Multi_key> <g> <r> <l> : "λ" # GREEK SMALL LETTER LAMDA
+<Multi_key> <g> <r> <m> : "μ" # GREEK SMALL LETTER MU
+<Multi_key> <g> <r> <n> : "ν" # GREEK SMALL LETTER NU
+<Multi_key> <g> <r> <x> : "ξ" # GREEK SMALL LETTER XI
+<Multi_key> <g> <r> <o> : "ο" # GREEK SMALL LETTER OMICRON
+<Multi_key> <g> <r> <p> : "π" # GREEK SMALL LETTER PI
+<Multi_key> <g> <r> <r> : "ρ" # GREEK SMALL LETTER RHO
+#<Multi_key> <g> <r> <a> : "ς" # GREEK SMALL LETTER FINAL SIGMA
+<Multi_key> <g> <r> <s> : "σ" # GREEK SMALL LETTER SIGMA
+<Multi_key> <g> <r> <t> : "τ" # GREEK SMALL LETTER TAU
+<Multi_key> <g> <r> <u> : "υ" # GREEK SMALL LETTER UPSILON
+<Multi_key> <g> <r> <f> : "φ" # GREEK SMALL LETTER PHI
+<Multi_key> <g> <r> <c> : "χ" # GREEK SMALL LETTER CHI
+<Multi_key> <g> <r> <p> <s> : "ψ" # GREEK SMALL LETTER PSI
+<Multi_key> <g> <r> <o> <m> : "ω" # GREEK SMALL LETTER OMEGA
+#<Multi_key> <g> <r> <a> : "ϛ" # GREEK SMALL LETTER STIGMA
+#<Multi_key> <g> <r> <a> : "ϝ" # GREEK SMALL LETTER DIGAMMA
+#<Multi_key> <g> <r> <a> : "ϟ" # GREEK SMALL LETTER KOPPA
+#<Multi_key> <g> <r> <a> : "ϡ" # GREEK SMALL LETTER SAMPI
+#<Multi_key> <g> <r> <a> : "ϸ" # GREEK SMALL LETTER SHO
+#<Multi_key> <g> <r> <a> : "ϻ" # GREEK SMALL LETTER SAN
+
+
 # App::Uni
 # $ uni 'greek.*letter'
 # $ perl -C -le 'print chr($_) for 9750..9780' | column
