@@ -24,6 +24,9 @@
     upstream = rev-parse --symbolic-full-name  --abbrev-ref HEAD@{upstream}
     # list files at revision
     ls-at = ls-tree -r --name-only
+    # patch for a commit:
+    #   git patch abc123 | perl -ple '' | git am -3 -k --ignore-space-change
+    patch = !"git format-patch -k --stdout $1^..$1"
 
     # http://lists-archives.com/git/694641-add-porcelain-option-to-git-push.html
     npush = !"git push -n $* ; \
