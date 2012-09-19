@@ -31,4 +31,8 @@ function sortwords () {
     perl -apple '$_=join q{ }, sort @F' "$@"
 }
 
+function procwd() {
+    local pid=$1; lsof -p $pid -a -d cwd -Fn | grep ^n | cut -c 2-
+}
+
 # vim: syntax=sh :
