@@ -25,5 +25,10 @@ function puzzle {
     done;
 }
 
+# echo d c b a e | sortwords #=> a b c d e
+# echo d-c-b-a-e | sortwords -F- #=> a b c d e
+function sortwords () {
+    perl -apple '$_=join q{ }, sort @F' "$@"
+}
 
 # vim: syntax=sh :
