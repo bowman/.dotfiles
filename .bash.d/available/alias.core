@@ -50,7 +50,7 @@ alias dotoff='. ~/.dotfiles/off'
 has safe_rm.pl  && alias rm='~/bin/safe_rm.pl'
 alias rrm='/bin/rm'
 
-alias p='perl -MYAML -le "print STDOUT " -e'
+alias p='perl -lE "eval q{use YAML::XS}; print STDOUT " -E'
 alias perll='perl -MClass::Autouse=:superloader'
 alias add="perl -nle '/(\d+)/ and \$s+=\$1; END { print \$s}'"
 alias pltrace='PERLDB_OPTS="NonStop=1 AutoTrace=1 frame=2" perl -dS'
