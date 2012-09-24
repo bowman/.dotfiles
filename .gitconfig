@@ -10,6 +10,7 @@
     cia = commit -v -a
     #co = checkout # too potentially dangerous to be 1 char away from ci
     di = diff --no-prefix
+    dic = diff --cached
     ds = diff --stat
     st = status
     ls = log --stat
