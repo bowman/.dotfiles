@@ -33,7 +33,7 @@
     npush = !"git push -n $* ; \
               git push -n --porcelain $* \
                 | perl -nlE '/\\t([0-9a-f]+\\.\\.[[0-9a-f]+)$/ && say $1' \
-                | xargs git log --stat --oneline"
+                | xargs --no-run-if-empty git log --stat --oneline"
 
     rebranch = branch -f
     # 2009-05-26  (merged-blah) 6fe85ff regenerate something Author Name
