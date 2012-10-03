@@ -36,7 +36,7 @@ function hfor {
 # (set -x ; source /home/bsb/.bash.d/available/vars.perl ) # traces
 function dotdo {
     for w in "$@"; do
-        # TODO match globs
+        # TODO match globs (dotfind)
         if [ -r "$HOME/.bash.d/available/$w" ] ; then
             echo "# $w => $HOME/.bash.d/available/$w"
             . "$HOME/.bash.d/available/$w"
@@ -44,6 +44,17 @@ function dotdo {
             echo "# '$w' not found"
         fi
     done
+}
+
+# dotfind git => $HOME/.bash.d/available/alias.git
+function dotfind () {
+    find "$HOME/.bash.d/available/" -name "*$@"
+}
+
+# dotgrep dot - try to find definition
+function dotgrep () {
+    egrep -s -H -r "$1.*[({=]" "$HOME/.bash.d/available/" \
+        || egrep -s -H -r "$1" "$HOME/.bash.d/available/"
 }
 
 # shared accounts
