@@ -9,6 +9,8 @@ alias ls='ls -Fh'
 alias la='ls -Fha'
 alias lss='ls -Fhs'
 alias ll='ls -Fhl'
+# ls -d1 -- */
+alias lsd="perl -E 'for \$a (@ARGV||q{}) { for (<\$a*>) { -d && say } }'"
 alias m='less -E'
 alias lo='locate'
 alias h='head'
