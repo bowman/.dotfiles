@@ -25,6 +25,13 @@ function puzzle {
     done;
 }
 
+function pfor {
+    perl -le "print for ($@)"
+}
+function hfor {
+    ghc -e "mapM_ print $@"
+}
+
 # dotdo vars.ps1
 # (set -x ; source /home/bsb/.bash.d/available/vars.perl ) # traces
 function dotdo {
