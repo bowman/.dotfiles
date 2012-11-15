@@ -25,7 +25,10 @@ export PSQL_EDITOR="/usr/bin/vim -c ':set syntax=sql'"
 # http://tiswww.case.edu/php/chet/bash/FAQ   /E13
 export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
 
-[ -r "$HOME/words/yawl-0.3.2/word.list" ] &&
+if [ -f "$HOME/words/yawl-0.3.2/word.list" ]; then
     export WORDS="$HOME/words/yawl-0.3.2/word.list"
+else
+    export WORDS="/usr/share/dict/words"
+fi
 
 # vim: syntax=sh :
