@@ -8,7 +8,7 @@ export MANOPT='-E ascii'  # avoid apostrophes going unicode
 
 export LC_COLLATE=C
 
-eval "$(lesspipe)" # Set LESSOPEN and LESSCLOSE
+has lesspipe && eval "$(lesspipe)" # Set LESSOPEN and LESSCLOSE
 export LESS="--no-init --quit-if-one-screen --ignore-case --LONG-PROMPT --QUIET"
 export GIT_PAGER="less -R"
 
