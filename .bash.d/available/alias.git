@@ -2,6 +2,8 @@
 alias gti='git'
 alias gci='git commit -v'
 alias gcia='git commit -v -a'
+alias gcif='git commit -v --fixup'
+alias gri='git rebase -i'
 alias ga='git add'
 alias gap='git add -p'
 alias gl='git log'

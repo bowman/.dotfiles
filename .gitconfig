@@ -17,6 +17,7 @@
     lp = log -p
     lo = log --pretty=oneline
     br = branch
+    ri = rebase -i
     diffwords = diff --word-diff
     ss = show --stat
     unstage = reset HEAD
