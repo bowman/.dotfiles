@@ -7,6 +7,7 @@ if [ "$PS1" ]; then
     . ~/.bash.d/available/func.has # aliases need
     . ~/.bash.d/available/complete.core # vars.ps1 needs
 
+    . ~/.bash.d/available/stty
     . ~/.bash.d/available/set.core
     . ~/.bash.d/available/shopt.core
     . ~/.bash.d/available/func.core

@@ -1,0 +1,17 @@
+# check current settings
+# stty -a | egrep -o -- '-?\<(ix\w*|start|stop)'
+
+if [ -t 0 ]; then       # check for a terminal
+
+    # Turn off TTY "start" and "stop" commands in all interactive shells.
+    # They default to C-q and C-s, Bash uses C-s to do a forward history search.
+    # I used C-s for tmux window swap
+    stty start ''
+    stty stop  ''
+    stty -ixon # disable XON/XOFF flow control
+    stty ixoff # enable sending (to app) of start/stop characters
+    stty ixany # let any character restart output, not only start character
+
+fi
+
+# vim: syntax=sh :
