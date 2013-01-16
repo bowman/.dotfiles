@@ -48,6 +48,9 @@ URxvt.shading: 50
 URxvt.tintColor: white
 URxvt.inheritPixmap: true
 
+# http://blog.yjl.im/2011/07/tmux-15-man-less-and-italic-text.html
+URxvt.colorIT: red
+
 !URxvt.cutchars: see rex version
 !URxvt.cutchars: :\\'"&()*,;<=>?@[]{|}
 
