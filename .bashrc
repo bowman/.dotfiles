@@ -24,6 +24,11 @@ if [ "$PS1" ]; then
 
     srcif ~/.bash.d/identity/debian
 
+    # custom for a given user (shared accounts)
+    srcif ~/.bashrc.${USER}
+    # tweaks for a given machine
+    srcif ~/.bashrc.${USER}_local
+
     # echo 'echo "Appointment 12:30" | write '$USER | at 12:00 tomorrow
     # echo 'notify-send "Appointment 12:30"' | at 12:00 tomorrow
     # echo 'notify-send -u critical -t 1000000 "THING"' | at 8:31
