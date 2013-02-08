@@ -33,6 +33,9 @@ set foldminlines=4
 map == :BufExplorer<CR>
 map =- :n#<CR>
 
+" 80 column highlight /\%>80v.\+
+" :match ErrorMsg '\%>80v.\+'
+
 " http://tinyurl.com/mje9sb
 " :set laststatus=2 to see always
 if has("statusline") && has("multi_byte")
