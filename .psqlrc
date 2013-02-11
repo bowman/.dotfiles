@@ -1,0 +1,19 @@
+-- Be quiet during loading of this file
+-- \set ECHO none
+
+\set all 'select * from'
+\set sp 'show search_path;'
+
+-- show "NULL" for NULL not ""
+\pset null NULL
+
+-- display timing info after each command
+\timing
+
+\set HISTCONTROL ignoredups
+
+\set PROMPT1 '%/@%m%R%x%# '
+\set PROMPT2 '%/@%m%R%x%# '
+
+-- When running scripts, echos all commmands to stdout.
+-- \set ECHO all
