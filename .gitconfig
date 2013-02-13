@@ -36,6 +36,8 @@
                 | perl -nlE '/\\t([0-9a-f]+\\.\\.[[0-9a-f]+)$/ && say $1' \
                 | xargs --no-run-if-empty git log --stat --oneline"
 
+    symh = symbolic-ref h HEAD # "h" as HEAD synonym
+
     rebranch = branch -f
     # 2009-05-26  (merged-blah) 6fe85ff regenerate something Author Name
     logdate = log --format=format:'%ad %d %h %s %an%n' --date=short
