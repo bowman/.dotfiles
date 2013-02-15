@@ -35,4 +35,8 @@ function procwd() {
     local pid=$1; lsof -p $pid -a -d cwd -Fn | grep ^n | cut -c 2-
 }
 
+function ips () {
+    ip -4 addr show scope global
+}
+
 # vim: syntax=sh :
