@@ -1,0 +1,6 @@
+(if (is "bw" (window_name))
+    (begin
+        (undecorate)
+        (stick)
+        (below)
+))
