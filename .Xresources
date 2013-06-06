@@ -70,3 +70,7 @@ URxvt.selection-autotransform.0: s/^ at (.*?) line (\\d+)]$/vi +$2 \\Q$1\E\x0d/
 
 ! Default is lpr, but I keep accidentally hitting Print
 URxvt.print-pipe: cat > $(TMPDIR=$HOME mktemp urxvt.XXXXXX)
+
+yeahconsole.term: urxvt
+yeahconsole.consoleHeight: 20
+#yeahconsole.toggleKey: Alt+`
