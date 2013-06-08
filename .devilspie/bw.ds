@@ -3,4 +3,6 @@
         (undecorate)
         (stick)
         (below)
+        (skip_pager)
+        (skip_tasklist)
 ))
