@@ -7,8 +7,10 @@
 
 ! For the patched urxvt
 ! http://lists.schmorp.de/pipermail/rxvt-unicode/2007q4/000514.html
-URxvt.font: xft:DejaVu Sans Mono-10,\
--misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+URxvt.font: xft:DejaVu Sans Mono-11,\
+-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1,\
+Symbola
+!URxvt.font: xft:DejaVu Sans Mono-10,\
 !URxvt.font: xft:DejaVu Sans Mono-11:dpi=81,\
 
 ! A slightly smaller font
@@ -48,11 +50,8 @@ URxvt.shading: 50
 URxvt.tintColor: white
 URxvt.inheritPixmap: true
 
-# http://blog.yjl.im/2011/07/tmux-15-man-less-and-italic-text.html
+! http://blog.yjl.im/2011/07/tmux-15-man-less-and-italic-text.html
 URxvt.colorIT: red
-
-!URxvt.cutchars: see rex version
-!URxvt.cutchars: :\\'"&()*,;<=>?@[]{|}
 
 ! This needs frills compiled in:
 URxvt.tripleclickwords: true
