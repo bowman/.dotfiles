@@ -1,0 +1,10 @@
+(if (and
+        (is (window_role) "conversation")
+        (is (window_class) "Pidgin"))
+    (begin
+        (stick)
+        (skip_pager)
+        (skip_tasklist)
+        (opacity 40) ; doesn't work
+    )
+)
