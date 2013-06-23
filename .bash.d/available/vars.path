@@ -1,6 +1,7 @@
 # try pathmunge
 
+HEROKU="/usr/local/heroku/bin"
 SEAMONKEY_PATH='/usr/local/seamonkey'
-export PATH="$PATH:$HOME/bin:$SEAMONKEY_PATH:$HOME/.cabal/bin"
+export PATH="$HEROKU:$PATH:$HOME/bin:$SEAMONKEY_PATH:$HOME/.cabal/bin"
 
 # vim: syntax=sh :
