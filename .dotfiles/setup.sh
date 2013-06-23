@@ -1,5 +1,5 @@
-
 # quickstart
+cd ~ # go HOME
 git clone --bare -n git://github.com/$(git config github.user || echo bowman)/.dotfiles.git ~/.dotfiles/repo.git
 git config -f .dotfiles/repo.git/config core.bare false
 git config -f .dotfiles/repo.git/config core.logallrefupdates true
