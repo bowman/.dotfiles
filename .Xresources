@@ -7,9 +7,14 @@
 
 ! For the patched urxvt
 ! http://lists.schmorp.de/pipermail/rxvt-unicode/2007q4/000514.html
+#ifdef CLNT_olokun
+URxvt.font: xft:DejaVu Sans Mono-10,\
+-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1,Symbola
+#else
 URxvt.font: xft:DejaVu Sans Mono-11,\
--misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1,\
-Symbola
+-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1,Symbola
+#endif
+
 !URxvt.font: xft:DejaVu Sans Mono-10,\
 !URxvt.font: xft:DejaVu Sans Mono-11:dpi=81,\
 
