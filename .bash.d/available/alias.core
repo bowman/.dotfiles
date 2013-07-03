@@ -4,6 +4,8 @@
 type -t has > /dev/null || . .bash.d/available/func.has
 
 alias s='cd ..'
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
 alias d='ls'
 alias ls='ls -Fh'
 alias la='ls -Fha'
