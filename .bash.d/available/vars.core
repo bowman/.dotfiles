@@ -14,7 +14,7 @@ export GIT_PAGER="less -R"
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoreboth
-export HISTIGNORE="reboot:halt:exit:fg:bg:ls:rm *:rrm *"
+export HISTIGNORE="reboot:halt:exit:fg:bg:ls:rm *:rrm *:1*"
 
 # app overrides
 export MYSQL_PS1='prompt mysql\_\h:\d>\_'
