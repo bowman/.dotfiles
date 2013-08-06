@@ -21,6 +21,7 @@ if [ "$PS1" ]; then
     . ~/.bash.d/available/alias.core
     . ~/.bash.d/available/alias.git
     . ~/.bash.d/available/alias.misc
+    . ~/.bash.d/available/alias.node
 
     srcif ~/.bash.d/identity/debian
 
