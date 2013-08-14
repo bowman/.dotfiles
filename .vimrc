@@ -25,6 +25,9 @@ if &term == "screen"
     :set t_kB=[Z
 endif
 
+" run line and include output in file
+" :exe "r!" . getline(".")
+
 set foldcolumn=0
 set foldlevelstart=1
 set foldminlines=4
