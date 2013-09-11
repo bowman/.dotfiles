@@ -6,6 +6,7 @@
     diff = auto
 
 [alias]
+# GIT_TRACE=1 to debug these
     ci = commit -v
     cia = commit -v -a
     #co = checkout # too potentially dangerous to be 1 char away from ci
