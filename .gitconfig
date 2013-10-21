@@ -115,5 +115,6 @@
     autosquash = 1
 [diff]
     mnemonicprefix = true
+    algorithm = patience
 [push]
 	default = upstream
