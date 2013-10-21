@@ -1,0 +1,12 @@
+export XSEND_DEFAULT='XSEND_DEFAULT-is-unset'
+
+# send xclipboard over ssh (also http://stackoverflow.com/questions/1152362)
+function xsend () {
+    xsel -o | ssh "${1:-$XSEND_DEFAULT}" bash -c \''xsel --display :0 -i'\'
+}
+
+function xrecv () {
+    ssh "${1:-$XSEND_DEFAULT}" bash -c \''xsel --display :0 -o'\' | xsel -i
+    xsel -o
+}
+
