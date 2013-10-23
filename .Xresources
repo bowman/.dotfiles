@@ -15,6 +15,10 @@ URxvt.font: xft:DejaVu Sans Mono-11,\
 -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1,Symbola
 #endif
 
+! correct urxvt spacing relative to mate-term, so two 80 col terms fit
+! http://www.saltycrane.com/blog/2009/11/how-make-urxvt-look-gnome-terminal/
+URxvt*letterSpace: -1
+
 !URxvt.font: xft:DejaVu Sans Mono-10,\
 !URxvt.font: xft:DejaVu Sans Mono-11:dpi=81,\
 
