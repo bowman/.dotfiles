@@ -10,3 +10,6 @@ function xrecv () {
     xsel -o
 }
 
+function xopen () {
+    xdg-open $(xclip -o)
+}
