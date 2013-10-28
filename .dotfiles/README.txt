@@ -20,7 +20,28 @@ ln -s $HOME/.dotfiles/gitignore-dots $HOME/.dotfiles/repo.git/info/exclude
 Check against /usr/share/git-core/templates/info/exclude ?
 
 Fancy Alternative:
-https://github.com/RichiH/vcsh
+https://github.com/RichiH/vcsh or vcsh package
+
+Sparse Checkouts
+================
+
+Git has opt-in sparse-checkouts which allow you to choose which files
+should be in your working directory, as specified in a gitignore format.
+
+    # enable sparse checkouts for this repo:
+    git config -f .dotfiles/repo.git/config core.sparseCheckout true
+
+    # sample sparse-checkout file
+    cat .dotfiles/repo.git/info/sparse-checkout
+    /.dotfiles/
+    /.bash*
+    /.inputrc
+    /.gitconfig
+    /.vimrc
+
+    # git checkout-index -a # plumbing doesn't honour sparse-checkout (?)
+    # since checkout-index can't be used, we need a conflict-free checkout
+    git checkout
 
 
 Dirty Updates
