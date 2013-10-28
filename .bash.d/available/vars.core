@@ -2,7 +2,7 @@ export FIGNORE=".o:.bak:CVS:.swp:.bak:blib:.hi"
 export GLOBIGNORE="*.o:*.bak:CVS:.*.swp:*.bak:blib"
 export EDITOR="vim"
 
-export BROWSER="seamonkey -remote openurl(%s,new-tab):seamonkey"
+export BROWSER="seamonkey -remote openurl(%s,new-tab):seamonkey:google-chrome"
 
 export MANOPT='-E ascii'  # avoid apostrophes going unicode
 
