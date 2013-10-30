@@ -1,0 +1,3 @@
+# http://stackoverflow.com/questions/6433241
+# ensure ~/.perldb is user writable only, doesn't keep builtins
+&parse_options("HistFile=$ENV{HOME}/.perldb.hist HistSize=600");
