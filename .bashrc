@@ -13,10 +13,12 @@ if [ "$PS1" ]; then
     . ~/.bash.d/available/func.core
     . ~/.bash.d/available/func.misc
     . ~/.bash.d/available/func.cd
+    . ~/.bash.d/available/func.xsend
     . ~/.bash.d/available/vars.path
     . ~/.bash.d/available/vars.core
     . ~/.bash.d/available/vars.ps1
     . ~/.bash.d/available/vars.perl
+    . ~/.bash.d/available/vars.perlbrew
     . ~/.bash.d/available/vars.misc
     . ~/.bash.d/available/alias.core
     . ~/.bash.d/available/alias.git
