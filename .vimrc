@@ -165,6 +165,17 @@ set cryptmethod=blowfish " strong method
 set nopaste
 set pastetoggle=<F11>
 
+" Conway-ed:
+set virtualedit=block
+" Make BS/DEL delete in visual modes
+vmap <BS> x
+" Use space to jump down a page (like browsers do)...
+nnoremap <Space> <PageDown>
+
+" S is :%s/.../.../g
+nmap S  [Shortcut for :s///g]  :%s//g<LEFT><LEFT>
+vmap S                         :s//g<LEFT><LEFT>
+
 :filetype plugin on
 
 "  - Formatting
