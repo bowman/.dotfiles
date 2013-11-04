@@ -159,6 +159,8 @@ set textwidth=78
 set formatoptions=q
 set gdefault " s///g unless g used to switch off
 
+set cryptmethod=blowfish " strong method
+
 " nopaste so that imapping work
 set nopaste
 set pastetoggle=<F11>
