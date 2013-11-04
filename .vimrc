@@ -17,6 +17,9 @@ iab pmod  :r ~/.code_templates/perl_module.pm
 
 let g:Perl_NoKeyMappings = 1
 
+" gnupg.com plugin
+let g:GPGPreferSymmetric = 1
+
 " Shift-Tab under screen with vim caused a 1sec lag due to tm=1000
 " :set timeout timeoutlen=1000 ttimeoutlen=100
 " See: ~/pain/vim+screen_shift_tab
