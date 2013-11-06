@@ -29,7 +29,9 @@ function pfor {
     perl -le "print for ($@)"
 }
 function hfor {
-    ghc -e "mapM_ print $@"
+    # does implicit imports of FQ-names/functions
+    ghc -XTransformListComp -XParallelListComp -XMonadComprehensions \
+        -e "mapM_ print \$ $@"
 }
 
 # dotdo vars.ps1
