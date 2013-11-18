@@ -62,6 +62,7 @@ alias perll='perl -MClass::Autouse=:superloader'
 alias add="perl -nle '/(\d+)/ and \$s+=\$1; END { print \$s}'"
 alias pltrace='PERLDB_OPTS="NonStop=1 AutoTrace=1 frame=2" perl -dS'
 alias http="plackup -MPlack::App::Directory -e'Plack::App::Directory->new->to_app'"
+alias perlparens='perl -MO=Deparse,-p -e '
 
 alias nocr='perl -pi -e "s/\cM$//; s/\cM/\n/g"'
 alias t2nl="perl -pe 's/\t/\n/g;'"
