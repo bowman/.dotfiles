@@ -5,6 +5,6 @@
         (stick)
         (skip_pager)
         (skip_tasklist)
-        (opacity 40) ; doesn't work
+        (opacity 80) ; works w/ compositing only
     )
 )
