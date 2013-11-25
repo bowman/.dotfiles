@@ -33,6 +33,7 @@ alias xoc='xclip -o >> cmds.txt'
 alias rp=realpath
 alias tstamp='date "+%Y-%m-%d"'
 alias tst='date "+%Y-%m-%d"'
+alias tf='tree -f'
 alias mkdir='mkdir -p'
 alias hf='history | g'
 alias ef='printenv|grep -i'
