@@ -39,4 +39,14 @@ function ips () {
     ip -4 addr show scope global
 }
 
+# ubuntu at least
+function restart_reqd () {
+    if [ -f /var/run/reboot-required ]; then
+        echo 'reboot required'
+        return 0 # Yes
+    else
+        return 1 # No
+    fi
+}
+
 # vim: syntax=sh :
